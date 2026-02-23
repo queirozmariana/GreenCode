@@ -1,0 +1,605 @@
+/* ==================== VARIÁVEIS ==================== */
+:root {
+    --primary-color: #2E7D32;
+    --secondary-color: #1565C0;
+    --text-color: #333333;
+    --background-light: #F5F5F5;
+    --spacing-unit: 1rem;
+    --container-width: 1200px;
+}
+
+/* ==================== RESET ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* ==================== BASE LAYOUT ==================== */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--secondary-color);
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ==================== HEADER E NAVEGAÇÃO ==================== */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* ==================== INTRO DO PROGRAMA ==================== */
+.service-hero section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.program-intro {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #444;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Arial', sans-serif;
+}
+
+.highlight-link {
+    color: #2E7D32;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* ==================== BENEFÍCIOS DO PROGRAMA ==================== */
+.program-benefits .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.program-benefits .service-card {
+    background-color: white;
+    border-left: 6px solid var(--primary-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.program-benefits .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.program-benefits .service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.program-benefits .service-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.program-benefits .service-card p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* ==================== SEÇÃO CTA ==================== */
+.cta-section {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    padding: 4rem 0;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 4rem;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-content .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid transparent;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cta-content .btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* ==================== CRITÉRIOS (CRITERIA) ==================== */
+.criteria.section {
+    background-color: #fff;
+    padding: 60px 20px;
+}
+
+.criteria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.criteria-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.criteria-card:hover {
+    transform: translateY(-5px);
+}
+
+.criteria-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #00a115;
+}
+
+.criteria-list {
+    list-style: disc inside;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+
+/* ==================== CRITÉRIOS (CRITERIA) ==================== */
+.criteria.section {
+    background: #f8f9fa;
+    padding: 60px 20px;
+}
+
+.criteria-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .criteria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.criteria-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    transition: transform 0.2s;
+}
+
+.criteria-card:hover {
+    transform: translateY(-4px);
+}
+
+.criteria-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.criteria-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.criteria-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* ==================== PROCESSO (PROCESS) ==================== */
+.process.section {
+    background-color: #1b5e20;
+    padding: 60px 20px;
+    color: #fff;
+}
+
+.process .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.process-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.process-step {
+    background-color: #ffffff;
+    color: #2e7d32;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 220px;
+    min-width: 220px;
+    max-width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #1b5e20;
+}
+
+.process-step p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* ==================== CONTAINER LADO A LADO PADRONIZADO ==================== */
+.container-side-by-side {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.container-side-by-side > * {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 280px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.container-side-by-side > *:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .container-side-by-side > * {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+}
+/* Container geral para cursos, kits e ebooks (já tem a classe .services-grid) */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* Cada card dentro do grid */
+.service-card {
+    flex: 1 1 calc(33.333% - 1.5rem); /* 3 colunas, menos gap */
+    min-width: 280px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Conteúdo interno do card */
+.card-content, .ebook-content {
+    padding: 1.5rem 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Botões nos cards */
+.btn-primary {
+    margin-top: auto;
+    align-self: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Badges dentro dos kits e ebooks */
+.kit-badge, .ebook-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+.ebook-badge {
+    background-color: var(--secondary-color);
+}
+
+/* Títulos */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Listas (features, kit-contents, ebook-features) */
+.service-features,
+.kit-contents,
+.ebook-features {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.service-features li,
+.kit-contents li,
+.ebook-features li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.service-features li::before,
+.kit-contents li::before,
+.ebook-features li::before {
+    content: "✓";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Preço */
+.price-tag,
+.ebook-price {
+    margin-top: auto;
+    text-align: center;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.price-info {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .service-card {
+        flex: 1 1 calc(50% - 1.5rem); /* 2 colunas em telas médias */
+    }
+}
+
+@media (max-width: 600px) {
+    .service-card {
+        flex: 1 1 100%; /* 1 coluna em telas pequenas */
+    }
+}
+
+
+/* ==================== ESTILOS DO FOOTER ==================== */
+.footer {
+    background-color: var(--text-color);
+    color: white;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade do Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* ==================== SOCIAL MEDIA ==================== */
+.social-media {
+    text-align: right;
+    margin: 30px 0;
+}
+
+.social-media h4 {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    color: #333;
+}

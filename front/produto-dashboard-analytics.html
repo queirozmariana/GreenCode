@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Analytics - GreenCode</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Dashboard Analytics</h1>
+          <p>Painel de controle para análise de impacto ambiental</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="product-details">
+            <div class="product-gallery">
+              <div class="main-image">
+                <img
+                  id="mainImg"
+                  src="images/dashboard-1.png"
+                  alt="Dashboard Analytics"
+                />
+              </div>
+              <div class="thumbnail-gallery">
+                <img
+                  src="images/dashboard-1.png"
+                  alt="Dashboard 1"
+                  class="thumbnail active"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/dashboard-2.png"
+                  alt="Dashboard 2"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/dashboard-3.png"
+                  alt="Dashboard 3"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/dashboard-4.png"
+                  alt="Dashboard 4"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/dashboard-5.png"
+                  alt="Dashboard 5"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+              </div>
+            </div>
+
+            <div class="product-info">
+              <h2>Sistema de Analytics Ambientais</h2>
+              <div class="price">R$ 3.500,00</div>
+
+              <div class="product-description">
+                <h3>Descrição</h3>
+                <p>
+                  Nosso Dashboard Analytics oferece uma visão completa e
+                  inteligente do impacto ambiental da sua instituição:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>Métricas em Tempo Real:</strong> Monitoramento
+                    contínuo de dados ambientais
+                  </li>
+                  <li>
+                    <strong>Relatórios Personalizados:</strong> Análises
+                    específicas para cada necessidade
+                  </li>
+                  <li>
+                    <strong>Alertas Inteligentes:</strong> Notificações
+                    automáticas de anomalias
+                  </li>
+                  <li>
+                    <strong>Comparativos Históricos:</strong> Análise de
+                    tendências ao longo do tempo
+                  </li>
+                  <li>
+                    <strong>Exportação de Dados:</strong> Relatórios em PDF,
+                    Excel e outros formatos
+                  </li>
+                </ul>
+
+                <h4>Benefícios:</h4>
+                <ul>
+                  <li>Tomada de decisões baseada em dados</li>
+                  <li>Identificação de oportunidades de melhoria</li>
+                  <li>Acompanhamento de metas ambientais</li>
+                  <li>Interface intuitiva e responsiva</li>
+                </ul>
+              </div>
+
+              <div class="purchase-section">
+                <button
+                  class="btn btn-primary btn-large"
+                  onclick="buyProduct()"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  Comprar Agora
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script type="module" src="./assets/js/componentLoader.js"></script>
+    <script>
+      function changeImage(thumbnail) {
+        document.querySelectorAll(".thumbnail").forEach((thumb) => {
+          thumb.classList.remove("active");
+        });
+        thumbnail.classList.add("active");
+        document.getElementById("mainImg").src = thumbnail.src;
+      }
+
+      function buyProduct() {
+        window.location.href =
+          "checkout.html?product=dashboard-analytics&price=3500";
+      }
+    </script>
+  </body>
+</html>

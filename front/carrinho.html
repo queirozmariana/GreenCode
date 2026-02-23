@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Carrinho - GreenCode</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="container section content">
+      <h1><i class="fas fa-shopping-cart"></i> Meu Carrinho de Compras</h1>
+
+      <div class="cart-layout">
+        <!-- Coluna da Esquerda: Itens do Carrinho -->
+        <div id="cart-items-container">
+          <!-- Conteúdo dinâmico aqui -->
+        </div>
+
+        <!-- Coluna da Direita: Resumo do Pedido -->
+        <aside
+          class="cart-summary"
+          id="cart-summary-container"
+          style="display: none"
+        >
+          <h2>Resumo do Pedido</h2>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal-price">R$ 0,00</span>
+          </div>
+          <div class="summary-row">
+            <span>Frete</span>
+            <span>Grátis</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="total-price">R$ 0,00</span>
+          </div>
+          <button class="btn btn-primary btn-full">Finalizar Compra</button>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/componentLoader.js"></script>
+    <script type="module" src="./assets/js/carrinho.js"></script>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - GreenCode</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">GreenCode</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+                <li><a href="servicos.html" class="nav-link">Serviços</a></li>
+                <li><a href="programa-escolas.html" class="nav-link">Programa Escolas</a></li>
+                <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Finalizar Compra</h1>
+                <p>Complete sua assinatura do plano GreenCode</p>
+            </div>
+        </section>
+
+        <!-- Checkout Section -->
+        <section class="section">
+            <div class="container">
+                <div class="checkout-grid">
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                        <h2>Resumo do Pedido</h2>
+                        <div class="selected-plan" id="selectedPlan">
+                            <div class="plan-info">
+                                <h3 id="planName">Plano Básico</h3>
+                                <div class="plan-price">
+                                    <span id="planPrice">R$ 299</span>
+                                    <span class="period">/mês</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-details">
+                            <div class="detail-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal">R$ 299,00</span>
+                            </div>
+                            <div class="detail-row">
+                                <span>Desconto primeiro mês</span>
+                                <span class="discount">-R$ 59,80</span>
+                            </div>
+                            <div class="detail-row total">
+                                <span>Total</span>
+                                <span id="total">R$ 239,20</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Form -->
+                    <div class="payment-section">
+                        <h2>Forma de Pagamento</h2>
+                        
+                        <!-- Payment Methods -->
+                        <div class="payment-methods">
+                            <div class="payment-method active" data-method="pix">
+                                <i class="fas fa-qrcode"></i>
+                                <span>PIX</span>
+                                <i class="fas fa-check payment-check"></i>
+                            </div>
+                            <div class="payment-method" data-method="debit">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Cartão de Débito</span>
+                                <i class="fas fa-check payment-check"></i>
+                            </div>
+                            <div class="payment-method" data-method="credit">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Cartão de Crédito</span>
+                                <i class="fas fa-check payment-check"></i>
+                            </div>
+                        </div>
+
+                        <!-- PIX Payment -->
+                        <div class="payment-form" id="pixForm">
+                            <div class="pix-info">
+                                <div class="pix-icon">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                                <h3>Pagamento via PIX</h3>
+                                <p>Você receberá um QR Code para pagamento após confirmar a compra.</p>
+                                
+                                <div class="pix-benefits">
+                                    <div class="benefit">
+                                        <i class="fas fa-bolt"></i>
+                                        <span>Aprovação instantânea</span>
+                                    </div>
+                                    <div class="benefit">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>100% seguro</span>
+                                    </div>
+                                    <div class="benefit">
+                                        <i class="fas fa-tag"></i>
+                                        <span>20% de desconto</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Payment Form -->
+                        <div class="payment-form hidden" id="cardForm">
+                            <form class="card-form" id="cardPaymentForm">
+                                <div class="form-group">
+                                    <label for="cardNumber">Número do Cartão</label>
+                                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                    <div class="card-icons">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <i class="fab fa-cc-amex"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Validade</label>
+                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/AA" maxlength="5" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cardName">Nome no Cartão</label>
+                                    <input type="text" id="cardName" name="cardName" placeholder="Nome como aparece no cartão" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" required>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Customer Information -->
+                        <div class="customer-info">
+                            <h3>Informações da Instituição</h3>
+                            <form class="customer-form" id="customerForm">
+                                <div class="form-group">
+                                    <label for="institutionName">Nome da Instituição</label>
+                                    <input type="text" id="institutionName" name="institutionName" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contactEmail">Email de Contato</label>
+                                    <input type="email" id="contactEmail" name="contactEmail" required>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contactPhone">Telefone</label>
+                                        <input type="tel" id="contactPhone" name="contactPhone" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="studentCount">Número de Alunos</label>
+                                        <input type="number" id="studentCount" name="studentCount" min="1" required>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="checkout-actions">
+                            <button type="button" class="btn btn-secondary" onclick="history.back()">
+                                <i class="fas fa-arrow-left"></i> Voltar
+                            </button>
+                            <button type="button" class="btn btn-primary" id="completeOrder">
+                                <i class="fas fa-credit-card"></i> Finalizar Compra
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>GreenCode</h3>
+                <p>Transformando a educação com tecnologia sustentável.</p>
+                <div class="footer-logo">
+                    <i class="fas fa-seedling"></i>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-envelope"></i> greencode.oficial@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (11) 93356-7586</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/green_code_oficial/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61575868294721" target="_blank" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@GreenCode_oficial" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 GreenCode. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

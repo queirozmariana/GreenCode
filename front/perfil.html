@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acesso e Cadastro - GreenCode</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+      <h1>Minha Conta</h1>
+      <div class="profile-tabs">
+        <button class="tab-link active" data-tab="orders">Meus Produtos</button>
+        <button class="tab-link" data-tab="cart">Carrinho</button>
+        <button class="tab-link" data-tab="profile-info">Meus Dados</button>
+      </div>
+
+      <!-- Conteúdo das Abas -->
+      <div id="orders" class="tab-content active">
+        <h2>Histórico de Compras</h2>
+        <div id="orders-container"></div>
+      </div>
+
+      <div id="cart" class="tab-content">
+        <h2>Meu Carrinho</h2>
+        <div id="cart-container"></div>
+      </div>
+
+      <div id="profile-info" class="tab-content">
+        <h2>Informações do Perfil</h2>
+        <!-- Formulário para atualizar dados -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script type="module" src="./assets/js/componentLoader.js"></script>
+    <script type="module" src="./assets/js/perfil.js"></script>
+  </body>
+</html>

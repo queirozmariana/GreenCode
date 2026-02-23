@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capacitação - GreenCode</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Capacitação</h1>
+          <p>Treinamentos para professores em tecnologia sustentável</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="product-details">
+            <div class="product-gallery">
+              <div class="main-image">
+                <img
+                  id="mainImg"
+                  src="images/capacitacao-1.png"
+                  alt="Capacitação"
+                />
+              </div>
+              <div class="thumbnail-gallery">
+                <img
+                  src="images/capacitacao-1.png"
+                  alt="Treinamento 1"
+                  class="thumbnail active"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/capacitacao-2.png"
+                  alt="Treinamento 2"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/capacitacao-3.png"
+                  alt="Treinamento 3"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/capacitacao-4.png"
+                  alt="Treinamento 4"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/capacitacao-5.png"
+                  alt="Treinamento 5"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+              </div>
+            </div>
+
+            <div class="product-info">
+              <h2>Programa de Capacitação Sustentável</h2>
+              <div class="price">R$ 1.200,00</div>
+
+              <div class="product-description">
+                <h3>Descrição</h3>
+                <p>
+                  Nosso programa de capacitação oferece treinamento completo
+                  para professores e gestores em tecnologias sustentáveis:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>Módulos Especializados:</strong> 8 módulos cobrindo
+                    diferentes aspectos da sustentabilidade
+                  </li>
+                  <li>
+                    <strong>Metodologias Ativas:</strong> Ensino prático e
+                    participativo
+                  </li>
+                  <li>
+                    <strong>Certificação:</strong> Certificado reconhecido pelo
+                    MEC
+                  </li>
+                  <li>
+                    <strong>Material Didático:</strong> Kit completo com
+                    recursos educacionais
+                  </li>
+                  <li>
+                    <strong>Suporte Contínuo:</strong> Acompanhamento
+                    pós-treinamento por 6 meses
+                  </li>
+                </ul>
+
+                <h4>Benefícios:</h4>
+                <ul>
+                  <li>Professores mais engajados e capacitados</li>
+                  <li>Melhoria na qualidade do ensino</li>
+                  <li>Integração de práticas sustentáveis</li>
+                  <li>Networking com outros educadores</li>
+                </ul>
+              </div>
+
+              <div class="purchase-section">
+                <button
+                  class="btn btn-primary btn-large"
+                  onclick="buyProduct()"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  Comprar Agora
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script type="module" src="./assets/js/componentLoader.js"></script>
+    <script>
+      function changeImage(thumbnail) {
+        document.querySelectorAll(".thumbnail").forEach((thumb) => {
+          thumb.classList.remove("active");
+        });
+        thumbnail.classList.add("active");
+        document.getElementById("mainImg").src = thumbnail.src;
+      }
+
+      function buyProduct() {
+        window.location.href = "checkout.html?product=capacitacao&price=1200";
+      }
+    </script>
+  </body>
+</html>

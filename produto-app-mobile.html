@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Mobile - GreenCode</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">GreenCode</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+                <li><a href="servicos.html" class="nav-link">Serviços</a></li>
+                <li><a href="programa-escolas.html" class="nav-link">Programa Escolas</a></li>
+                <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>App Mobile Sustentável</h1>
+                <p>Aplicativo mobile para gestão e monitoramento sustentável</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="product-details">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img id="mainImg" src="images/app-mobile-1.png" alt="App Mobile">
+                        </div>
+                        <div class="thumbnail-gallery">
+                            <img src="images/app-mobile-1.png" alt="App Interface 1" class="thumbnail active" onclick="changeImage(this)">
+                            <img src="images/app-mobile-2.png" alt="App Interface 2" class="thumbnail" onclick="changeImage(this)">
+                            <img src="images/app-mobile-3.png" alt="App Interface 3" class="thumbnail" onclick="changeImage(this)">
+                            <img src="images/app-mobile-4.png" alt="App Interface 4" class="thumbnail" onclick="changeImage(this)">
+                            <img src="images/app-mobile-5.png" alt="App Interface 5" class="thumbnail" onclick="changeImage(this)">
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <h2>Aplicativo de Gestão Sustentável</h2>
+                        <div class="price">R$ 5.000,00</div>
+                        
+                        <div class="product-description">
+                            <h3>Descrição</h3>
+                            <p>Nosso aplicativo mobile oferece uma solução completa para gestão e monitoramento de práticas sustentáveis em escolas:</p>
+                            
+                            <ul>
+                                <li><strong>Dashboard Interativo:</strong> Visualização em tempo real de dados ambientais</li>
+                                <li><strong>Monitoramento de Energia:</strong> Acompanhamento do consumo e geração de energia</li>
+                                <li><strong>Gestão de Resíduos:</strong> Controle de reciclagem e compostagem</li>
+                                <li><strong>Gamificação:</strong> Sistema de pontos para engajar estudantes</li>
+                                <li><strong>Relatórios Personalizados:</strong> Análises detalhadas de impacto ambiental</li>
+                            </ul>
+                            
+                            <h4>Benefícios:</h4>
+                            <ul>
+                                <li>Interface intuitiva e amigável</li>
+                                <li>Dados em tempo real</li>
+                                <li>Engajamento dos estudantes</li>
+                                <li>Tomada de decisões baseada em dados</li>
+                            </ul>
+                        </div>
+
+                        <div class="purchase-section">
+                            <button class="btn btn-primary btn-large" onclick="buyProduct()">
+                                <i class="fas fa-shopping-cart"></i>
+                                Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>GreenCode</h3>
+                <p>Transformando a educação com tecnologia sustentável.</p>
+                <div class="footer-logo">
+                    <i class="fas fa-seedling"></i>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-envelope"></i> greencode.oficial@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (11) 93356-7586</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/green_code_oficial/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61575868294721" target="_blank" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@GreenCode_oficial" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 GreenCode. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function changeImage(thumbnail) {
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            thumbnail.classList.add('active');
+            document.getElementById('mainImg').src = thumbnail.src;
+        }
+
+        function buyProduct() {
+            window.location.href = 'checkout.html?product=app-mobile&price=5000';
+        }
+    </script>
+</body>
+</html>

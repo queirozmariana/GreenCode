@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GreenCode - Tecnologia Sustentável na Educação</title>
+    <link rel="stylesheet" href="../produto 1/style.css.produto-1/style.css">
+        <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+</head>
+<body>
+      <!-- Header --> 
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">GreenCode</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Início</a></li>
+                <li><a href="../sobre.html" class="nav-link">Sobre Nós</a></li>
+                <li><a href="../servicos.html" class="nav-link">Serviços</a></li>
+                <li><a href="../programa-escolas.html" class="nav-link">Programa Escolas</a></li>
+                <li><a href="../eventos.html" class="nav-link">Eventos</a></li>
+                <li><a href="../contato.html" class="nav-link">Contato</a></li>
+                <li><a href="../login.html" class="nav-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<br><br><br><br>
+
+  <section class="produto-hero section">
+    <div class="produto-container">
+
+      <!-- Imagem grande -->
+      <div class="produto-hero-main">
+        <figure class="main-figure">
+          <img id="produtoMain" class="produto-hero-image" src="../imagens_serviços/ebook.jpg" alt="Imagem do produto">
+        </figure>
+      </div>
+
+      <!-- Texto -->
+      <div class="produto-intro">
+        <h2>Ebook de Programação</h2>
+        <p>
+        Aprenda programação do zero com exemplos fáceis e exercícios práticos. 
+        O ebook cobre lógica, HTML, CSS, JavaScript e introdução a Python, perfeito para quem quer começar no mundo tech.
+        </p>
+        <h3>R$ 67,90</h3>
+        <a href="#" class="btn-primary" onclick="openCheckout()">Comprar</a>
+        <a href="../../perfil/carrinho.html" class="btn-secondary">Adicionar ao carrinho</a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+<div class="Videoaulas"> 
+  <div class="video-container">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/tqjogRuH13o?si=-mzGUo0NppdfMJU9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div class="video-text">
+    <p>
+      O Ebook de Programação é o guia essencial para começar no mundo da tecnologia, com exercícios práticos e exemplos de HTML, CSS, JavaScript e Python. 
+      Baixe o PDF abaixo para ter acesso a uma amostra do conteúdo e veja no vídeo ao lado como essas linguagens ganham vida em projetos reais.
+    </p>
+
+    <button class=" botao-download">  <a  href="../produto8/E-book Programação _20250901_180135_0000.pdf" download="PDF"> PDF</a></button>
+
+  </div>
+</div>
+
+ <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>GreenCode</h3>
+                <p>Transformando a educação com tecnologia sustentável.</p>
+                <div class="footer-logo">
+                    <i class="fas fa-seedling"></i>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-envelope"></i> greencode.oficial@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (11) 93356-7586</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/green_code_oficial/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61575868294721" target="_blank" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@GreenCode_oficial" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 GreenCode. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mensagem de Sucesso -->
+<div id="successMessage" class="success-message">
+  <div class="success-box">
+    <div class="checkmark">✔</div>
+    <p>Compra realizada com sucesso!</p>
+  </div>
+</div>
+    <!-- Modal de Checkout -->
+<div id="checkoutModal" class="checkout-modal">
+  <div class="checkout-content">
+    <span class="close-btn" onclick="closeCheckout()">&times;</span>
+
+    <!-- Produto -->
+    <div class="checkout-left">
+      <img src="../imagens_serviços/ebook.jpg" alt="Produto">
+      <p><b>Ebook de Programação</b></p>
+      <div class="quantity">
+        <button onclick="updateQuantity(-1)">−</button>
+        <span id="qty">1</span>
+        <button onclick="updateQuantity(1)">+</button>
+      </div>
+    </div>
+
+    <!-- Formulário -->
+    <div class="checkout-right">
+      <form>
+        <label>Email/Telefone</label>
+        <input type="text" required>
+
+        <label>Endereço</label>
+        <input type="text" required>
+
+        <label>Forma de Pagamento</label>
+        <select required>
+          <option value="">Selecione</option>
+          <option value="credito">Cartão de Crédito</option>
+          <option value="boleto">Boleto</option>
+          <option value="pix">Pix</option>
+        </select>
+
+
+ <div class="terms">
+  <label>
+    <input type="checkbox" checked>
+    Eu aceito todos os termos <a href="#">Seus dados estão seguros</a>
+  </label>
+</div>
+
+
+        <button class="btn-primary" type="submit">Finalizar a Compra</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Abrir modal
+  function openCheckout() {
+    document.getElementById("checkoutModal").style.display = "flex";
+  }
+  // Fechar modal
+  function closeCheckout() {
+    document.getElementById("checkoutModal").style.display = "none";
+  }
+  // Controle de quantidade
+  let qty = 1;
+  function updateQuantity(change) {
+    qty = Math.max(1, qty + change);
+    document.getElementById("qty").textContent = qty;
+  } 
+
+  // Finalizar compra
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("#checkoutModal form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); // não recarrega a página
+      closeCheckout(); // fecha modal
+
+      // mostra mensagem de sucesso
+      const success = document.getElementById("successMessage");
+      success.classList.add("show");
+
+      // some depois de 3s
+      setTimeout(() => {
+        success.classList.remove("show");
+      }, 3000);
+    });
+  });
+</script>
+
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+</body>
+</html>

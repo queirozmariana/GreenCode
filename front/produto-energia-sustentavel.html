@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Energia Sustentável - GreenCode</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- Product Hero -->
+      <section class="hero">
+        <div class="container">
+          <h1>Energia Sustentável</h1>
+          <p>Projetos de energia renovável para escolas</p>
+        </div>
+      </section>
+
+      <!-- Product Details -->
+      <section class="section">
+        <div class="container">
+          <div class="product-details">
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+              <div class="main-image">
+                <img
+                  id="mainImg"
+                  src="images/energia-sustentavel-1.png"
+                  alt="Energia Sustentável"
+                />
+              </div>
+              <div class="thumbnail-gallery">
+                <img
+                  src="images/energia-sustentavel-1.png"
+                  alt="Energia Sustentável 1"
+                  class="thumbnail active"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/energia-sustentavel-2.png"
+                  alt="Energia Sustentável 2"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/energia-sustentavel-3.png"
+                  alt="Energia Sustentável 3"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/energia-sustentavel-4.png"
+                  alt="Energia Sustentável 4"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/energia-sustentavel-5.png"
+                  alt="Energia Sustentável 5"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+              <h2>Energia Sustentável para Escolas</h2>
+              <div class="price">R$ 15.000,00</div>
+
+              <div class="product-description">
+                <h3>Descrição</h3>
+                <p>
+                  Nossa solução de Energia Sustentável oferece um sistema
+                  completo de energia renovável especialmente projetado para
+                  instituições de ensino. O projeto inclui:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>Painéis Solares de Alta Eficiência:</strong> Sistema
+                    fotovoltaico com tecnologia de última geração
+                  </li>
+                  <li>
+                    <strong>Sistema de Monitoramento:</strong> Acompanhamento em
+                    tempo real da geração e consumo de energia
+                  </li>
+                  <li>
+                    <strong>Baterias de Armazenamento:</strong> Sistema de
+                    backup para garantir energia contínua
+                  </li>
+                  <li>
+                    <strong>Integração Educativa:</strong> Dashboard educativo
+                    para alunos aprenderem sobre energia sustentável
+                  </li>
+                  <li>
+                    <strong>Manutenção Incluída:</strong> Suporte técnico e
+                    manutenção por 2 anos
+                  </li>
+                </ul>
+
+                <h4>Benefícios:</h4>
+                <ul>
+                  <li>Redução de até 70% na conta de energia elétrica</li>
+                  <li>Educação ambiental prática para os estudantes</li>
+                  <li>Contribuição para um futuro mais sustentável</li>
+                  <li>Retorno do investimento em até 5 anos</li>
+                </ul>
+              </div>
+
+              <div class="purchase-section">
+                <button
+                  class="btn btn-primary btn-large"
+                  onclick="buyProduct()"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  Comprar Agora
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script type="module" src="./assets/js/componentLoader.js"></script>
+    <script>
+      function changeImage(thumbnail) {
+        document.querySelectorAll(".thumbnail").forEach((thumb) => {
+          thumb.classList.remove("active");
+        });
+
+        thumbnail.classList.add("active");
+
+        document.getElementById("mainImg").src = thumbnail.src;
+      }
+
+      function buyProduct() {
+        window.location.href =
+          "checkout.html?product=energia-sustentavel&price=15000";
+      }
+    </script>
+  </body>
+</html>

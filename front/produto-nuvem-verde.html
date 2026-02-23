@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuvem Verde - GreenCode</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Nuvem Verde</h1>
+          <p>Armazenamento em nuvem com baixo impacto ambiental</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="product-details">
+            <div class="product-gallery">
+              <div class="main-image">
+                <img
+                  id="mainImg"
+                  src="images/nuvem-verde-1.png"
+                  alt="Nuvem Verde"
+                />
+              </div>
+              <div class="thumbnail-gallery">
+                <img
+                  src="images/nuvem-verde-1.png"
+                  alt="Data Center Verde 1"
+                  class="thumbnail active"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/nuvem-verde-2.png"
+                  alt="Data Center Verde 2"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/nuvem-verde-3.png"
+                  alt="Data Center Verde 3"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/nuvem-verde-4.png"
+                  alt="Data Center Verde 4"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/nuvem-verde-5.png"
+                  alt="Data Center Verde 5"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+              </div>
+            </div>
+
+            <div class="product-info">
+              <h2>Serviço de Nuvem Sustentável</h2>
+              <div class="price">R$ 800,00/mês</div>
+
+              <div class="product-description">
+                <h3>Descrição</h3>
+                <p>
+                  Nossa solução de Nuvem Verde oferece armazenamento e
+                  processamento de dados com o menor impacto ambiental possível:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>Data Centers Verdes:</strong> 100% alimentados por
+                    energia renovável
+                  </li>
+                  <li>
+                    <strong>Armazenamento Eficiente:</strong> 1TB de espaço
+                    otimizado
+                  </li>
+                  <li>
+                    <strong>Backup Automático:</strong> Proteção de dados em
+                    tempo real
+                  </li>
+                  <li>
+                    <strong>Acesso Global:</strong> Servidores distribuídos
+                    mundialmente
+                  </li>
+                  <li>
+                    <strong>API Completa:</strong> Integração fácil com sistemas
+                    existentes
+                  </li>
+                </ul>
+
+                <h4>Benefícios:</h4>
+                <ul>
+                  <li>Zero emissão de carbono</li>
+                  <li>Alta disponibilidade (99.9%)</li>
+                  <li>Escalabilidade automática</li>
+                  <li>Conformidade com LGPD</li>
+                </ul>
+              </div>
+
+              <div class="purchase-section">
+                <button
+                  class="btn btn-primary btn-large"
+                  onclick="buyProduct()"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  Comprar Agora
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script type="module" src="./assets/js/componentLoader.js"></script>
+    <script>
+      function changeImage(thumbnail) {
+        document.querySelectorAll(".thumbnail").forEach((thumb) => {
+          thumb.classList.remove("active");
+        });
+        thumbnail.classList.add("active");
+        document.getElementById("mainImg").src = thumbnail.src;
+      }
+
+      function buyProduct() {
+        window.location.href = "checkout.html?product=nuvem-verde&price=800";
+      }
+    </script>
+  </body>
+</html>

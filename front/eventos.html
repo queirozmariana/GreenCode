@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos - GreenCode</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-3">
+        <div class="container">
+          <h1>Eventos e Workshops</h1>
+          <p>
+            Participe de nossos eventos sobre tecnologia sustentável na educação
+          </p>
+        </div>
+      </section>
+
+      <!-- Próximos Eventos (será preenchido dinamicamente) -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Próximos Eventos</h2>
+          <div class="events-grid" id="upcoming-events-container">
+            <!-- Cards de Próximos Eventos serão inseridos aqui pelo js/events.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Eventos Anteriores (será preenchido dinamicamente) -->
+      <section class="section past-events">
+        <div class="container">
+          <h2 class="section-title">Eventos Anteriores</h2>
+          <div class="past-events-grid" id="past-events-container">
+            <!-- Cards de Eventos Anteriores serão inseridos aqui pelo js/events.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERIA DE EVENTOS (Esta seção permaneceu estática como no original) -->
+      <div class="pagina-eventos">
+        <section class="galeria-eventos">
+          <h2 class="titulo-secao">Galeria de Fotos dos Eventos</h2>
+          <div class="swiper galeria-swiper">
+            <div class="swiper-wrapper">
+            </div>
+
+            <!-- Navegação e Paginação do Swiper -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <br /><br />
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Seção de Chamada para Ação (CTA) -->
+      <section class="cta-section section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Inscreva-se</h2>
+            <p>
+              As inscrições para eventos já estão abertas. Para tirar dúvidas,
+              entrem em contato. <br />
+              Faça o download do nosso template e se inscreva com nosso
+              formulário.<br />
+              Não perca esta oportunidade!
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc_X7UJclwQw3GW5nQypAOBdWykfC44ZGeqNmreaNMRKBaXpQ/viewform?usp=preview"
+              class="btn btn-primary"
+              >Fazer Inscrição</a
+            >
+            <a
+              href="../GreenCode/Template Eventos _20250904_221049_0000.pdf"
+              download
+              class="btn btn-secondary"
+              ><i class="fa-solid fa-download"></i>Download
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/componentLoader.js"></script>
+    <script src="./assets/js/events.js"></script>
+  </body>
+</html>

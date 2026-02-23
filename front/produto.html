@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Mobile - GreenCode</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script src="https://js.stripe.com/v3/"/></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main class="container section">
+      <!-- Container principal -->
+      <div id="product-details-container">
+        <p class="loading-message">Carregando detalhes do produto...</p>
+      </div>
+
+      <div id="product-extra-details-container" class="section"></div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script type="module" src="./assets/js/produto.js"></script>
+    <script type="module" src="./assets/js/componentLoader.js"></script>
+  </body>
+</html>

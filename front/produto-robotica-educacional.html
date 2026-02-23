@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robótica Educacional - GreenCode</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Robótica Educacional</h1>
+          <p>Kits de robótica sustentável para aprendizado prático</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="product-details">
+            <div class="product-gallery">
+              <div class="main-image">
+                <img
+                  id="mainImg"
+                  src="images/robotica-1.png"
+                  alt="Robótica Educacional"
+                />
+              </div>
+              <div class="thumbnail-gallery">
+                <img
+                  src="images/robotica-1.png"
+                  alt="Kit Robótica 1"
+                  class="thumbnail active"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/robotica-2.png"
+                  alt="Kit Robótica 2"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/robotica-3.png"
+                  alt="Kit Robótica 3"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/robotica-4.png"
+                  alt="Kit Robótica 4"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/robotica-5.png"
+                  alt="Kit Robótica 5"
+                  class="thumbnail"
+                  onclick="changeImage(this)"
+                />
+              </div>
+            </div>
+
+            <div class="product-info">
+              <h2>Kit de Robótica Educacional Sustentável</h2>
+              <div class="price">R$ 2.500,00</div>
+
+              <div class="product-description">
+                <h3>Descrição</h3>
+                <p>
+                  Nossa solução de Robótica Educacional oferece kits completos e
+                  sustentáveis para o ensino de STEM com foco em consciência
+                  ambiental:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>Componentes Recicláveis:</strong> Peças feitas com
+                    materiais sustentáveis e biodegradáveis
+                  </li>
+                  <li>
+                    <strong>Sensores Ambientais:</strong> Medição de qualidade
+                    do ar, temperatura e umidade
+                  </li>
+                  <li>
+                    <strong>Painéis Solares Miniaturizados:</strong> Energia
+                    renovável para os projetos
+                  </li>
+                  <li>
+                    <strong>Programação Visual:</strong> Interface drag-and-drop
+                    para iniciantes
+                  </li>
+                  <li>
+                    <strong>Projetos Prontos:</strong> 20+ projetos focados em
+                    sustentabilidade
+                  </li>
+                </ul>
+
+                <h4>Benefícios:</h4>
+                <ul>
+                  <li>Ensino prático de conceitos STEM</li>
+                  <li>Consciência ambiental desde cedo</li>
+                  <li>Desenvolvimento do pensamento lógico</li>
+                  <li>Preparação para carreiras do futuro</li>
+                </ul>
+              </div>
+
+              <div class="purchase-section">
+                <button
+                  class="btn btn-primary btn-large"
+                  onclick="buyProduct()"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  Comprar Agora
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script type="module" src="./assets/js/componentLoader.js"></script>
+    <script>
+      function changeImage(thumbnail) {
+        document.querySelectorAll(".thumbnail").forEach((thumb) => {
+          thumb.classList.remove("active");
+        });
+        thumbnail.classList.add("active");
+        document.getElementById("mainImg").src = thumbnail.src;
+      }
+
+      function buyProduct() {
+        window.location.href =
+          "checkout.html?product=robotica-educacional&price=2500";
+      }
+    </script>
+  </body>
+</html>
